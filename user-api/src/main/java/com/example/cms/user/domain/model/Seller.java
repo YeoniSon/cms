@@ -16,7 +16,7 @@ import java.util.Locale;
 @NoArgsConstructor
 @AllArgsConstructor
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity{
+public class Seller extends BaseEntity {
 
     @Id
     @Column(name = "id", nullable = false)
@@ -27,18 +27,16 @@ public class Customer extends BaseEntity{
     private String email;
     private String name;
     private String password;
-    private String phone;
     private LocalDate birth;
+    private String phone;
 
-    private LocalDateTime verifyExpiredAt;
+    private LocalDateTime verificationExpireAt;
     private String verificationCode;
     private boolean verify;
-
-    @Column(columnDefinition = "int default 0")
     private Integer balance;
 
-    public static Customer from(SignUpForm form) {
-        return Customer.builder()
+    public static Seller from(SignUpForm form) {
+        return Seller.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
                 .password(form.getPassword())
                 .name(form.getName())

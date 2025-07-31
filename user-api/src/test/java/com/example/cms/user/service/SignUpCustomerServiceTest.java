@@ -2,10 +2,10 @@ package com.example.cms.user.service;
 
 import com.example.cms.user.domain.SignUpForm;
 import com.example.cms.user.domain.model.Customer;
+import com.example.cms.user.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 import java.time.LocalDate;
 
