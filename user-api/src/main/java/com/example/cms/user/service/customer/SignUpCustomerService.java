@@ -1,10 +1,9 @@
-package com.example.cms.user.service;
+package com.example.cms.user.service.customer;
 
 import com.example.cms.user.domain.SignUpForm;
 import com.example.cms.user.domain.model.Customer;
 import com.example.cms.user.domain.repository.CustomerRepository;
 import com.example.cms.user.exception.CustomException;
-import com.example.cms.user.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,7 +45,7 @@ public class SignUpCustomerService {
     }
 
     @Transactional
-    public LocalDateTime ChangeCustomerValidateEmail(Long customerId, String verificationCode) {
+    public LocalDateTime changeCustomerValidateEmail(Long customerId, String verificationCode) {
         Optional<Customer> customerOptional = customerRepository.findById(customerId);
 
         if (customerOptional.isPresent()) {
