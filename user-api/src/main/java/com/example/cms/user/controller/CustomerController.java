@@ -4,7 +4,7 @@ import com.example.cms.user.domain.customer.ChangeBalanceForm;
 import com.example.cms.user.domain.customer.CustomerDto;
 import com.example.cms.user.domain.model.Customer;
 import com.example.cms.user.exception.CustomException;
-import com.example.cms.user.service.customer.CustomerBalanceService;
+import com.example.cms.user.service.CustomerBalanceService;
 import com.example.cms.user.service.customer.CustomerService;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
