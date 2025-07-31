@@ -1,41 +1,36 @@
 ### 회원가입 (고객)
-POST http://localhost:8081/signUp/customer
+POST http://localhost:8081/signup/customer
 Content-Type: application/json
 
 {
   "birth": "1989-04-20",
-  "email": "testmail@gmail.com",
+  "email": "testmail03170@gmail.com",
   "name": "myName",
   "password": "pw",
   "phone": "01000000000"
 }
 
 ### 이메일 인증 (고객)
-GET https://localhost:8081/signup/customer/verify?email=testmail@gmail.com&code=
+GET http://localhost:8081/signup/customer/verify/?email=testmail03170@gmail.com&code=eEokXnQqGk
 
 ### 로그인 (고객)
-POST https://localhost:8081/signup/customer
+POST http://localhost:8081/signin/customer
 Content-Type: application/json
 
 {
-  "email": "testmail@gmail.com",
+  "email": "testmail03170@gmail.com",
   "password": "pw"
 }
 
 ### 회원 정보 조회 (고객)
-GET https://localhost:8081/signup/customer/getInfo
+GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN:
-
-{
-  "email": "testmail@gmail.com",
-  "password": "pw"
-}
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTM5NjkxMDksImV4cCI6MTc1NDA1NTUwOX0.b8mAQzrBK28J9gSfvaSXLl4ovKmz9a6_nttYZRoH3eg
 
 ### 잔액 변경 (고객)
-POST https://localhost:8081/signup/customer/balance
+POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN:
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTM5NjkxMDksImV4cCI6MTc1NDA1NTUwOX0.b8mAQzrBK28J9gSfvaSXLl4ovKmz9a6_nttYZRoH3eg
 
 {
   "from": "server",
@@ -46,7 +41,30 @@ X-AUTH-TOKEN:
 ###################
 
 ### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "2000-03-15",
+  "email": "testmail03170@gmail.com",
+  "name": "sellerName",
+  "password": "pw",
+  "phone": "01011111111"
+}
+
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify/?email=testmail03170@gmail.com&code=46HzlpWMWg
 
 ### 로그인 (셀러)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
 
-### 회원정보
+{
+  "email": "testmail03170@gmail.com",
+  "password": "pw"
+}
+
+### 회원정보 (셀러)
+GET http://localhost:8081/seller/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzUzOTY5NjgxLCJleHAiOjE3NTQwNTYwODF9.0yiMf5k-YX1DKTXMQvlWb2bFwN8xdwSSQG1t7jH_9L0

@@ -1,5 +1,6 @@
 package com.example.cms.user.controller;
 
+import com.example.cms.user.domain.customer.ChangeBalanceForm;
 import com.example.cms.user.domain.model.Seller;
 import com.example.cms.user.domain.seller.SellerDto;
 import com.example.cms.user.exception.CustomException;
@@ -9,10 +10,7 @@ import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.domain.domain.common.UserVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static com.example.cms.user.exception.ErrorCode.NOT_FOUND_USER;
 
