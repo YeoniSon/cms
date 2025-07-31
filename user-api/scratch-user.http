@@ -1,0 +1,52 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signUp/customer
+Content-Type: application/json
+
+{
+  "birth": "1989-04-20",
+  "email": "testmail@gmail.com",
+  "name": "myName",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증 (고객)
+GET https://localhost:8081/signup/customer/verify?email=testmail@gmail.com&code=
+
+### 로그인 (고객)
+POST https://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "email": "testmail@gmail.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회 (고객)
+GET https://localhost:8081/signup/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN:
+
+{
+  "email": "testmail@gmail.com",
+  "password": "pw"
+}
+
+### 잔액 변경 (고객)
+POST https://localhost:8081/signup/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN:
+
+{
+  "from": "server",
+  "message": "돈 충전",
+  "money" : 50000
+}
+
+###################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
+
+### 회원정보
