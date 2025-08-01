@@ -29,7 +29,7 @@ public class SellerProductController {
         );
     }
 
-    @PutMapping("/item")
+    @PostMapping("/item")
     public ResponseEntity<ProductDto> addProductItem(@RequestHeader(name = "X-AUTH-TOKEN") String token,
                                                      @RequestBody AddProductItemForm form) {
 
@@ -53,7 +53,7 @@ public class SellerProductController {
         );
     }
 
-    @PostMapping("/item")
+    @PutMapping("/item")
     public ResponseEntity<ProductItemDto> updateProductItem(@RequestHeader(name = "X-AUTH-TOKEN") String token,
                                                      @RequestBody UpdateProductItemForm form) {
 
@@ -63,5 +63,22 @@ public class SellerProductController {
                                 provider.getUserVo(token).getId(), form)
                 )
         );
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteProduct(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                                    @RequestParam Long id) {
+
+        productService.deleteProduct(provider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/item")
+    public ResponseEntity<Void> deleteProductItem(@RequestHeader(name = "X-AUTH-TOKEN") String token,
+                                                            @RequestParam Long id) {
+
+
+        productItemService.deleteProductItem(provider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
     }
 }
