@@ -20,6 +20,9 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+    all {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
 }
 
 dependencies {
@@ -36,7 +39,7 @@ dependencies {
     // redis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     testImplementation ('it.ozimov:embedded-redis:0.7.3'){
-        exclude group: "org.slf4", module: "slf4j-simple"
+        exclude group: "org.slf4j", module: "slf4j-simple"
     }
 
     testImplementation 'com.h2database:h2'
@@ -47,10 +50,14 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
 
     implementation 'org.springframework.data:spring-data-envers'
-    implementation 'io.springfox:springfox-boot-starter:3.0.0'
+    implementation ('io.springfox:springfox-boot-starter:3.0.0') {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
