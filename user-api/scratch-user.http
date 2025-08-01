@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (고객)
-GET http://localhost:8081/signup/customer/verify/?email=testmail03170@gmail.com&code=eEokXnQqGk
+GET http://localhost:8081/signup/customer/verify/?email=testmail03170@gmail.com&code=uXlSiitycs
 
 ### 로그인 (고객)
 POST http://localhost:8081/signin/customer
@@ -25,12 +25,14 @@ Content-Type: application/json
 ### 회원 정보 조회 (고객)
 GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTM5NjkxMDksImV4cCI6MTc1NDA1NTUwOX0.b8mAQzrBK28J9gSfvaSXLl4ovKmz9a6_nttYZRoH3eg
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTQwNTY5NDgsImV4cCI6MTc1NDE0MzM0OH0.dTlXe0GnzVD4zsaVdKKGR72z5qOHBmIvirXwQCrUPgU
+
 
 ### 잔액 변경 (고객)
 POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6InFpalNBakR1VUZRVnlabDFkMStsZ1E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTM5NjkxMDksImV4cCI6MTc1NDA1NTUwOX0.b8mAQzrBK28J9gSfvaSXLl4ovKmz9a6_nttYZRoH3eg
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTQwNTY5NDgsImV4cCI6MTc1NDE0MzM0OH0.dTlXe0GnzVD4zsaVdKKGR72z5qOHBmIvirXwQCrUPgU
+
 
 {
   "from": "server",
