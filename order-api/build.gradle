@@ -35,6 +35,12 @@ dependencies {
 //    implementation 'org.springframework.boot:spring-boot-starter:3.0.0'
     implementation 'mysql:mysql-connector-java'
 
+    //queryDSL
+    implementation 'com.querydsl:querydsl-jpa'
+    annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jpa'
+    annotationProcessor 'javax.persistence:javax.persistence-api'
+    annotationProcessor 'javax.annotation:javax.annotation-api'
+
 
     // redis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
