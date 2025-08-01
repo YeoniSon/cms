@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (셀러)
-GET http://localhost:8081/signup/seller/verify/?email=testmail03170@gmail.com&code=46HzlpWMWg
+GET http://localhost:8081/signup/seller/verify/?email=testmail03170@gmail.com&code=ifIYhwk8Fi
 
 ### 로그인 (셀러)
 POST http://localhost:8081/signin/seller
@@ -67,4 +67,4 @@ Content-Type: application/json
 ### 회원정보 (셀러)
 GET http://localhost:8081/seller/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzUzOTY5NjgxLCJleHAiOjE3NTQwNTYwODF9.0yiMf5k-YX1DKTXMQvlWb2bFwN8xdwSSQG1t7jH_9L0
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzU0MDM1NjI3LCJleHAiOjE3NTQxMjIwMjd9.pStgLQsjDmqK4m5VWNMJFOT2AgftpiSQaPvJ3jy7c1E
