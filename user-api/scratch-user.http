@@ -37,7 +37,7 @@ X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3am
 {
   "from": "server",
   "message": "돈 충전",
-  "money" : 50000
+  "money" : 100000
 }
 
 ###################
