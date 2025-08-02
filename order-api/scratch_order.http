@@ -116,3 +116,32 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3a
   "sellerId": 1
 }
 
+### 카트 조회
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTQwNTY5NDgsImV4cCI6MTc1NDE0MzM0OH0.dTlXe0GnzVD4zsaVdKKGR72z5qOHBmIvirXwQCrUPgU
+
+### 카트 주문
+POST http://localhost:8082/customer/cart/order
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiaThTYk9hYjFoMm1vbkNOVnpoejR5aHg3amh0Yzgvd3Q4YmdHWTc1R1VNPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3NTQwNTY5NDgsImV4cCI6MTc1NDE0MzM0OH0.dTlXe0GnzVD4zsaVdKKGR72z5qOHBmIvirXwQCrUPgU
+{
+  "customerId": 1,
+  "products": [
+    {
+      "id": 1,
+      "sellerId": 1,
+      "name": "나이키 에어포스",
+      "description": "상품 설명",
+      "items": [
+        {
+          "id": 1,
+          "name": "270",
+          "count": 1,
+          "price": 100000
+        }
+      ]
+    }
+  ],
+  "messages": []
+}
