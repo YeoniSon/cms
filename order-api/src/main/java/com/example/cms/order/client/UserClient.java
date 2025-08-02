@@ -2,6 +2,8 @@ package com.example.cms.order.client;
 
 import com.example.cms.order.client.user.ChangeBalanceForm;
 import com.example.cms.order.client.user.CustomerDto;
+
+import com.example.cms.order.client.user.SendMailForm;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,4 +24,7 @@ public interface UserClient {
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
             @RequestBody ChangeBalanceForm form
     );
+
+    @PostMapping("/email/order")
+    ResponseEntity<String> sendOrderEmail(@RequestBody SendMailForm form);
 }

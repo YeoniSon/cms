@@ -6,6 +6,7 @@ import com.example.cms.order.client.user.CustomerDto;
 import com.example.cms.order.domain.model.ProductItem;
 import com.example.cms.order.domain.redis.Cart;
 import com.example.cms.order.exception.CustomException;
+import com.example.cms.order.service.EmailService;
 import com.example.cms.order.service.ProductItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,7 @@ public class OrderApplication {
     private final CartApplication cartApplication;
     private final UserClient userClient;
     private final ProductItemService productItemService;
+    private final EmailService emailService;
 
     @Transactional
     public void order(String token, Cart cart) {
@@ -56,6 +58,8 @@ public class OrderApplication {
                 productItem.setCount(productItem.getCount() - cartItem.getCount());
             }
         }
+
+        emailService.sendOrderConfirmationEmail(customerDto, orderCart, totalPrice);
     }
 
     private Integer getTotalPrice(Cart cart) {
@@ -71,6 +75,8 @@ public class OrderApplication {
                 .sum();
 
     }
+
+
 
     // 결제를 위해 필요한 것
     // 1번 : 물건들이 전부 주문 가능한 상태인지 확인

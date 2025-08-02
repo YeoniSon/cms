@@ -18,6 +18,7 @@ public class CustomerCartController {
     private final OrderApplication orderApplication;
     private final JwtAuthenticationProvider provider;
 
+    // 장바구니 추가
     @PostMapping
     public ResponseEntity<Cart> addCart(
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
@@ -28,6 +29,7 @@ public class CustomerCartController {
         );
     }
 
+    // 장바구니 조회
     @GetMapping
     public ResponseEntity<Cart> showCart(
             @RequestHeader(name = "X-AUTH-TOKEN") String token
@@ -37,6 +39,7 @@ public class CustomerCartController {
         );
     }
 
+    // 장바구리 변경
     @PutMapping
     public ResponseEntity<Cart> updateCart(
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
@@ -47,6 +50,7 @@ public class CustomerCartController {
         );
     }
 
+    // 장바구니 구매
     @PostMapping("/order")
     public ResponseEntity<Cart> order(
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
