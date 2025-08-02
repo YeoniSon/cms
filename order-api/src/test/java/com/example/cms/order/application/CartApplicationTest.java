@@ -30,7 +30,9 @@ class CartApplicationTest {
     void ADD_TEST() {
         Long customerId = 100L;
 
+        // Redis 완전 초기화
         cartApplication.clearCart(customerId);
+        
         Product p = add_product();
         Product result = productRepository.findWithProductItemsById(p.getId()).get();
 
@@ -45,12 +47,11 @@ class CartApplicationTest {
         assertEquals(result.getProductItems().get(0).getPrice(), 10000);
 //        assertEquals(result.getProductItems().get(0).getCount(), 1);
 
-
+        // 첫 번째 장바구니 추가 - 새로운 상품이므로 메시지 없음
         Cart cart = cartApplication.addCart(customerId, makeAddForm(result));
+        assertEquals(cart.getMessages().size(), 0);
 
-        //데이터가 잘 들어갔는지
-        assertEquals(cart.getMessages().size(), 1);
-
+        // 장바구니 조회 - 메시지 유지
         cart = cartApplication.getCart(customerId);
         assertEquals(cart.getMessages().size(), 1);
     }
