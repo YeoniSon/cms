@@ -23,6 +23,10 @@ public class Cart {
     private List<Product> products = new ArrayList<>();
     private List<String> messages = new ArrayList<>();
 
+    public Cart(Long customerId) {
+        this.customerId = customerId;
+    }
+
     public void addMessage(String message) {
         messages.add(message);
     }
@@ -56,7 +60,7 @@ public class Cart {
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ProductItem{
+    public static class ProductItem {
         private Long id;
         private String name;
         private Integer count;
