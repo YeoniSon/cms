@@ -113,9 +113,7 @@ public class CartApplication {
                     isPriceChanged = true;
                     cartProductItem.setPrice(pi.getPrice());
                 }
-                if (cartProductItem.getCount() >
-                        productItemMap.get(cartProductItem.getId())
-                                .getCount()
+                if (cartProductItem.getCount() >pi.getCount()
                 ) {
                     isCountNotEnough = true;
                     cartProductItem.setCount(pi.getCount());
